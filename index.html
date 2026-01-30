@@ -52,6 +52,7 @@
             <button id="btn-uak" class="tab-btn" onclick="switchTab('uak')">УАК</button>
             <button id="btn-pk" class="tab-btn" onclick="switchTab('pk')">Процессуальный</button>
             <button id="btn-por" class="tab-btn" onclick="switchTab('por')">Порядок</button>
+            <button id="btn-dk" class="tab-btn" onclick="switchTab('dk')">Дорожный</button>
         </div>
         <div class="search-wrapper">
             <input type="text" id="searchInput" class="search-box" placeholder="Поиск по номеру, названию или тексту" oninput="search()">
@@ -61,7 +62,7 @@
 
     <div id="content" class="container"></div>
 
-    <script src="vazno.js"></script><script src="uak.js"></script><script src="pk.js"></script><script src="por.js"></script>
+    <script src="vazno.js"></script><script src="uak.js"></script><script src="pk.js"></script><script src="por.js"></script><script src="dk.js"></script>
 
     <script>
         let currentType = 'vazno';
@@ -101,6 +102,7 @@
                 if(currentType === 'uak') return uak_data;
                 if(currentType === 'pk') return pk_data;
                 if(currentType === 'por') return por_data;
+                if(currentType === 'dk') return dk_data;
             } catch(e) { return []; }
         }
 
